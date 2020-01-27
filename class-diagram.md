@@ -1,24 +1,28 @@
 # クラス図
 
 ## goals
+目標のツイート
+
 | カラム名 | 型 |
 |:-----------|:------------|
 | id | integer |
-| m_content | text |
-| v_content | text |
-| c_content | text |
+| mr_content | text |
+| an_content | text |
+| cp_content | text |
 | user_id | integer |
 | created_at | datetime |
 | updated_at | datetime |
 
 
 ## users
+サービスを使うユーザー
+
 | カラム名 | 型 |
 |:-----------|:------------|
 | id | integer |
 | name | string |
 | email | string |
-| icon | string |
+| image | string |
 | introduction | text |
 | created_at | datetime |
 | updated_at | datetime |
@@ -32,6 +36,8 @@
 | reset_sent_at | datetime |
 
 ## relationships
+フォローフォロワー
+
 | カラム名 | 型 |
 |:-----------|:------------|
 | id | integer |
@@ -42,26 +48,38 @@
 
 
 ## categories
+カテゴリー
+
 | カラム名 | 型 |
 |:-----------|:------------|
 | id | integer |
 | name | string |
+| created_at | datetime |
+| updated_at | datetime |
 
 ## goal_category_relations
+ツイートとカテゴリーを繋ぐテーブル
+
 | カラム名 | 型 |
 |:-----------|:------------|
 | id | integer |
 | goal_id | integer |
-| category_id | integer | 
+| category_id | integer |
+| created_at | datetime |
+| updated_at | datetime |
 
 
 ## likes
+ツイートのいいね
+
 | カラム名 | 型 |
 |:-----------|:------------|
 | user_id | integer |
 | goal_id | integer |
 
 ## comments
+ツイートのコメント
+
 | カラム名 | 型 |
 |:-----------|:------------|
 | user_id | integer |
